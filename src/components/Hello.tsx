@@ -5,16 +5,16 @@ import "./Hello.css";
 
 export interface Props {
   name: string;
-  enthusiasmLeveL?: number;
+  enthusiasmLevel?: number;
 }
 
 function getExclamationMarks(numberOfCharacters: number) {
   return Array(numberOfCharacters + 1).join("!");
 }
 
-function Hello({name, enthusiasmLeveL = 1}: Props) {
+function Hello({name, enthusiasmLevel = 1}: Props) {
 
-  if (enthusiasmLeveL <= 0 ) {
+  if (enthusiasmLevel <= 0 ) {
     throw new Error("The enthusiasm level can't be below zero.");
   }
 
@@ -22,7 +22,7 @@ function Hello({name, enthusiasmLeveL = 1}: Props) {
 
     <div className="hello">
       <div className="greeting">
-        <p>Hello {name + getExclamationMarks(enthusiasmLeveL)}</p>
+        <p>Hello {name + getExclamationMarks(enthusiasmLevel)}</p>
       </div>
     </div>
 
