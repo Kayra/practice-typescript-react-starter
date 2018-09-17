@@ -4,11 +4,11 @@ import * as ReactDOM from 'react-dom';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
-import Hello from "./components/Hello";
+import StatefulHello from "./components/StatefulHello";
 
 
 ReactDOM.render(
-  <Hello name="Typescript" enthusiasmLeveL={1} />,
+  <StatefulHello name="Typescript" enthusiasmLevel={1} />,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
