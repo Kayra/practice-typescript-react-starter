@@ -29,8 +29,8 @@ function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
       </div>
 
       <div>
-        <button onClick={onIncrement}>+</button>
-        <button onClick={onDecrement}>-</button>
+        <button className="increment" onClick={onIncrement}>+</button>
+        <button className="decrement" onClick={onDecrement}>-</button>
       </div>
 
     </div>
