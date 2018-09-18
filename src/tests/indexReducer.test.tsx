@@ -1,15 +1,25 @@
-import * as React from "react";
 import * as enzyme from "enzyme";
 
-import enthusiasm from "../reducers/index";
+import { enthusiasm } from "../reducers/index";
+
+import { incrementEnthusiasm, decrementEnthusiasm } from "../actions/index";
 
 
-const testState = {
+const initialTestState = {
   languageName: "",
   enthusiasmLevel: 2
 }
 
 it("Increases the enthusiasm level in the state by one when passed the INCREMENT_ENTHUSIASM type", () => {
+
+  const expectedResultState = {
+    languageName: "",
+    enthusiasmLevel: 3
+  }
+
+  const actualResultState = enthusiasm(initialTestState, incrementEnthusiasm());
+
+  expect(actualResultState).toEqual(expectedResultState);
 
 });
 
