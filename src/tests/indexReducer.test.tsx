@@ -30,6 +30,15 @@ it("Increases the enthusiasm level in the state by one when passed the INCREMENT
 
 it("Decreases the enthusiasm level in the state by one when passed the DECREMENT_ENTHUSIASM type", () => {
   
+  const expectedResultState = {
+    languageName: "",
+    enthusiasmLevel: 1
+  }
+
+  const actualResultState = enthusiasm(initialTestState, decrementEnthusiasm());
+
+  expect(actualResultState).toEqual(expectedResultState);
+
 });
 
 it("Does not allow the enthusiasm level in the state to fall below 1", () => {
