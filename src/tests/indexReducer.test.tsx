@@ -1,14 +1,19 @@
 import * as enzyme from "enzyme";
 
 import { enthusiasm } from "../reducers/index";
+import { StoreState } from "../types/index";
 
 import { incrementEnthusiasm, decrementEnthusiasm } from "../actions/index";
 
 
-const initialTestState = {
-  languageName: "",
-  enthusiasmLevel: 2
-}
+let initialTestState: StoreState;
+beforeEach(() => {
+  initialTestState = {
+    languageName: "",
+    enthusiasmLevel: 2
+  }
+})
+
 
 it("Increases the enthusiasm level in the state by one when passed the INCREMENT_ENTHUSIASM type", () => {
 
