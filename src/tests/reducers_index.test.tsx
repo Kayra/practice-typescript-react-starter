@@ -12,7 +12,6 @@ beforeEach(() => {
   }
 })
 
-
 it("Increases the enthusiasm level in the state by one when passed the INCREMENT_ENTHUSIASM type", () => {
 
   const expectedResultState = {
@@ -23,7 +22,6 @@ it("Increases the enthusiasm level in the state by one when passed the INCREMENT
   expect(actualResultState).toEqual(expectedResultState);
 
 });
-
 
 it("Decreases the enthusiasm level in the state by one when passed the DECREMENT_ENTHUSIASM type", () => {
   
@@ -36,7 +34,6 @@ it("Decreases the enthusiasm level in the state by one when passed the DECREMENT
 
 });
 
-
 it("Does not allow the enthusiasm level in the state to fall below 1", () => {
   
   initialTestState.enthusiasmLevel = 1
@@ -45,9 +42,7 @@ it("Does not allow the enthusiasm level in the state to fall below 1", () => {
     languageName: "",
     enthusiasmLevel: 1
   }
-
   const actualResultState = enthusiasm(initialTestState, decrementEnthusiasm());
-
   expect(actualResultState).toEqual(expectedResultState);
 
 });
