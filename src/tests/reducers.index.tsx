@@ -39,10 +39,7 @@ it("Decreases the enthusiasm level in the state by one when passed the DECREMENT
 
 it("Does not allow the enthusiasm level in the state to fall below 1", () => {
   
-  const initialTestState = {
-    languageName: "",
-    enthusiasmLevel: 1
-  } as StoreState
+  initialTestState.enthusiasmLevel = 1
   
   const expectedResultState = {
     languageName: "",
