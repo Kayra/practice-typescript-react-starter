@@ -3,9 +3,10 @@ import * as enzyme from "enzyme";
 
 import enthusiasm from "../reducers/index";
 
-let testState = {
-  languageName = "",
-  enthusiasmLevel = 1
+
+const testState = {
+  languageName: "",
+  enthusiasmLevel: 2
 }
 
 it("Increases the enthusiasm level in the state by one when passed the INCREMENT_ENTHUSIASM type", () => {
