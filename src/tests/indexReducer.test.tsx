@@ -1,5 +1,3 @@
-import * as enzyme from "enzyme";
-
 import { enthusiasm } from "../reducers/index";
 import { StoreState } from "../types/index";
 
