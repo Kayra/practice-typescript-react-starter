@@ -17,15 +17,3 @@ it("Renders the correct text with an explicit enthusiasm level of more than one 
   const hello = enzyme.shallow(<Hello name="Kayra" enthusiasmLevel={5} />);
   expect(hello.find(".greeting").text()).toEqual("Hello Kayra!!!!!");
 });
-
-it("Throws an error when the enthusiasm level is 0", () => {
-  expect(() => {
-    enzyme.shallow(<Hello name="Kayra" enthusiasmLevel={0} />);
-  }).toThrow();
-});
-
-it("Throws an error when the enthusiasm level is negative", () => {
-  expect(() => {
-    enzyme.shallow(<Hello name="Kayra" enthusiasmLevel={-1} />);
-  }).toThrow();
-});
