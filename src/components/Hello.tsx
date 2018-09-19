@@ -16,10 +16,6 @@ function getExclamationMarks(numberOfCharacters: number) {
 
 function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
 
-  if (enthusiasmLevel <= 0 ) {
-    throw new Error("The enthusiasm level can't be below zero.");
-  }
-
   return (
 
     <div className="hello">
